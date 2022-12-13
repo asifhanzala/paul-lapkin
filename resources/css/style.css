@@ -1,0 +1,507 @@
+/* ======================================
+
+Template Name: Paul Lapkin
+Template URI: https://moshiur.dev/projects/paul-lapkin/
+Author: Moshiur
+Author URI: https://moshiur.me
+Version: 1.0
+Description: An awesome personal portolio template.
+Support: moshiur@codersfoundation.com
+
+========================================*/
+
+/* ======================================
+
+CSS INDEX
+---------
+1. Google Fonts
+2. Common CSS
+3. Reusable Components
+4. Header Section
+5. About Section
+6. Work process Section
+7. Experience Section
+8. Latest Work Section
+9. Testimonial Section
+10. Contact Section
+11. Footer Section
+========================================*/
+
+/* 1. Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* 2. Common CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #000;
+    background: #fff;
+    font-size: 62.5%;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+h1{
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin: 1rem 0;
+    position: relative;
+    display: inline-block;
+}
+h1::before{
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: #fff;
+    position: absolute;
+}
+h1::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    background: #fff;
+    position: absolute;
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color:#000;
+}
+h3{
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+h4{
+    font-size: 1.8rem;
+    color: #fff;
+}
+a:link,
+a:hover {
+    text-decoration: none;
+}
+.hero-text-box h1,
+.hero-text-box span,
+.menu-icon ion-icon,
+.close-btn ion-icon,
+.next-section ion-icon{
+    color:#fff;
+}
+ul{
+    padding: 0;
+}
+
+/* 3. Reusable Components */
+section{
+    padding: 10rem 0;
+}
+.row{
+    max-width: 118rem;
+    margin: auto;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+p,
+span{
+    font-size: 1.6rem;
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 4.5rem;
+}
+.section-title span{
+    display: inline-block;
+    margin: 1.5rem 0;
+    color:#000;
+}
+.btn-default {
+    width: 20rem;
+    background: #ff2b4a;
+    padding: 1rem 0;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    border: .1rem solid #ff2b4a;
+    transition: .5s;
+}
+.btn-default:hover{
+    background:transparent;
+    color:#ff2b4a;
+}
+/* ======================================
+4. HEADER SECTION
+========================================*/
+/*NAVBAR*/
+#navbar{
+    background: rgba(0, 0, 0, 0.95);
+    width: 0%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    overflow: hidden;
+}
+.close-btn{
+    position: absolute;
+    top: .8rem;
+    right: 8rem;
+}
+.close-btn a ion-icon{
+    transition: 1s;
+}
+.close-btn:hover a ion-icon{
+    color: #ff2b4a;
+    border: .1rem solid #ff2b4a;
+}
+.menu-item{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.menu-item ul li{
+    display: block;
+}
+.menu-item ul li a{
+    color: #fff;
+    font-size: 2.6rem;
+    margin: 1rem 0;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: 1s;
+}
+.menu-item ul li:hover a{
+    color: #ff2b4a;
+    font-size: 2.7rem;
+}
+
+/*STICKY MENU*/
+nav{
+    z-index: 9999;
+}
+nav.uk-sticky-fixed {
+    background: rgb(0 0 0 / 85%);
+}
+nav.uk-sticky-fixed .logo,
+nav.uk-sticky-fixed .menu-icon{
+    margin-top: 0;
+    margin: 1rem 0;
+}
+#hero{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/hero.jpg) no-repeat center top / cover;
+    overflow: hidden;
+}
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo{
+    margin-top: 4.5rem;
+    float: left;
+}
+.logo img{
+    width: 3.5rem;
+}
+.menu-icon{
+    margin-top: 4.5rem;
+    float: right;
+}
+.menu-icon a ion-icon{
+    transition: 1s;
+}
+.menu-icon:hover a ion-icon{
+    color: #ff2b4a;
+    border: .1rem solid #ff2b4a;
+}
+.menu-icon ion-icon, .close-btn ion-icon{
+    font-size: 4rem;
+    border: 0.1rem solid #fff;
+}
+.hero-text-box{
+    content: '';
+    display: table;
+    clear: both;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.hero-text-box span{
+    font-size: 2.3rem;
+    display: block;
+}
+.next-section{
+    bottom: 4.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 999;
+}
+.next-section a ion-icon{
+    transition: 1s;
+}
+.next-section:hover a ion-icon{
+    color: #ff2b4a;
+}
+.next-section a ion-icon{
+    z-index: 9999;
+    font-size: 4.5rem;
+    position: relative;
+    animation: 2s arrow infinite ease-in;
+}
+@keyframes arrow {
+    0% {
+        top: 1rem;
+    }
+    60%{
+        top: 3rem;
+    }
+    100%{
+        top: 1rem;
+    }
+}
+/* ======================================
+5. ABOUT SECTION
+========================================*/
+.about-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 4.5rem;
+}
+.about-grid-item h4{
+    color:#000;
+}
+.paul{
+    width: 100%;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+.about-description{
+    margin: 3rem 0;
+}
+
+/* ======================================
+6. WORK PROCESS SECTION
+========================================*/
+#work-process{
+    background: #f6f6f6;
+}
+.work-porcess-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    display: grid;
+}
+
+.work-process-grid-item {
+    text-align: center;
+    text-transform: uppercase;
+    background: #000;
+    color: #fff;
+    padding: 10rem 0;
+}
+.work-process-grid-item h4{
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+.work-process-grid-item:nth-child(1){
+    background: #10c6fc;
+}
+.work-process-grid-item:nth-child(2){
+    background: #835aeb;
+}
+.work-process-grid-item:nth-child(3){
+    background: #002453;
+}
+.work-process-grid-item:nth-child(4){
+    background: #ff2b4a;
+}
+
+.work-process-grid-item ion-icon {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+/* ======================================
+7. EXPERIENCE SECTION
+========================================*/
+.experience-gird {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    color: #fff;
+}
+
+.experience-grid-item {
+    background: #000000bd;
+    padding: 3rem 2.5rem;
+}
+
+section#experience {
+    background: #000 url(img/experience.jpg) no-repeat center top / cover fixed;
+}
+
+.experience-details {
+    margin: 4.5rem 0;
+}
+
+.experience-details span {
+    margin: 1.5rem 0;
+    display: inline-block;
+}
+/* ======================================
+8. LATEST WORK SECTION
+========================================*/
+.latest-works-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: 26rem;
+}
+
+.latest-works-grid-item img{
+    width: 100%;
+    height: 100%;
+}
+.latest-works-grid-item:nth-child(5){
+    grid-column: 1/3;
+}
+.work-filter {
+    text-align: center;
+}
+.work-filter-menu li a {
+    width: 12rem;
+    background: #ff2b4a;
+    padding: 0.2rem 0;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    border: 0.1rem solid #ff2b4a;
+}
+.work-filter-menu .uk-active a {
+    background: transparent;
+    color: #ff2b4a;
+}
+/* ======================================
+9. TESTIMONIAL SECTION
+========================================*/
+#testimonial{
+    background: url(img/testimonial.jpg) no-repeat center top / cover;
+}
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.testimonial-grid-item p {
+    width: 70%;
+    text-align: justify;
+    margin: 4.5rem 0;
+}
+
+.testimonial-grid-item h4 {
+    margin: 1.5rem 0;
+    color: #000;
+}
+/* ======================================
+10. CONTACT SECTION
+========================================*/
+#contact{
+    background: url(img/contact.jpg) no-repeat center center / cover fixed;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.contact-grid-item:nth-child(1),
+.address-grid-item{
+    background: #000000bd;
+    color: #fff;
+    padding: 3.5rem 2rem;
+}
+.contact-grid-item h3 {
+    margin-bottom: 4.5rem;
+}
+.contact-grid-item.address{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+.contact-form input[type="text"],.contact-form input[type="email"],
+.contact-form textarea{
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #fff;
+}
+.contact-form textarea{
+    height: 20rem;
+}
+.submit-btn {
+    margin-top: 3rem;text-align: right;
+}
+
+.submit-btn .btn:hover {
+    color: #fff;
+    border: 0.1rem solid #fff;
+    cursor: pointer;
+}
+/* ======================================
+11. FOOTER SECTION
+========================================*/
+#footer{
+    background: #222;
+    padding: 6rem 0;
+    text-align: center;
+    color: #fff;
+}
+.social-list ul li a ion-icon{
+    font-size: 2rem;
+    color: #fff;
+    padding: 0 1rem;
+    border-right: .1rem solid #fff;
+}
+.social-list ul li:hover a ion-icon{
+    color:#ff2b4a;
+    transition:.5s;
+}
+.social-list ul li:nth-child(4) a ion-icon{
+    border:none
+}
+.copyright a {
+    color: #ff2b4a;
+    text-transform: uppercase;
+}
+
+.copyright a:hover {
+    cursor:pointer;
+    color:#fff;
+    transition: 1s;
+}
